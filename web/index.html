@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-<style>
-</style>
-<title>jonze</title>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+    }
+
+
+    video#bgvid {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      background: url(pancha.png) no-repeat;
+      background-size: cover;
+    }
+
+    #box {
+      height: 30px;
+      width: 200px;
+      background-color: white;
+      top: 5%;
+      left: 5%;
+    }
+
+  </style>
+
 </head>
 <body>
-<div id="main" class="col-md-6">
-
-</div>
-
+<video playsinline autoplay muted loop poster="pancha.png" id="bgvid">
+  <source src="bgvid.webm" type="video/webm">
+  <source src="bgvid.mp4" type="video/mp4">
+</video>
+<div id="box"></div>
 
 
 </body>
