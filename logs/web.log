@@ -1,2 +1,0 @@
-64.246.165.50 - - [26/May/2016:01:04:37 +0100] "GET / HTTP/1.1" 200 415 "http://whois.domaintools.com/jonze.uk" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en; rv:1.9.0.13) Gecko/2009073022 Firefox/3.5.2 (.NET CLR 3.5.30729) SurveyBot/2.3 (DomainTools)"
-64.246.165.50 - - [26/May/2016:01:04:36 +0100] "GET /robots.txt HTTP/1.1" 404 353 "-" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en; rv:1.9.0.13) Gecko/2009073022 Firefox/3.5.2 (.NET CLR 3.5.30729) SurveyBot/2.3 (DomainTools)"
