@@ -29,24 +29,36 @@
     }
 
     .box {
-      height: 200px;
-      width: 300px;
-      padding: 5px 20px;
+      height: 204px;
+      width: 304px;
+      padding: 8px 8px;
       margin: 10px;
       float: left;
+      position: relative;
+    }
+
+    .box-inner {
+      padding: 10px 10px;
+      border-style: solid;
+      border-width: 2px;
+      border-color: #919191;
+      width: 280px;
+      height: 180px;
+      position: absolute;
+
     }
 
     #box1
     {
-      background-color: #e5c115; /*AAA70C E7DA47*/
+      background-color: #D8D8D8; /*FFFEFD C1C0C0*/
     }
     #box2
     {
-      background-color: #1C8D0A;
+      background-color: #CECECE;
     }
     #box3
     {
-      background-color: #A60C17;
+      background-color: #CECECE;
     }
 
     #menu
@@ -62,6 +74,36 @@
       display: inline-block;
     }
 
+    @font-face {
+    font-family: 'galatia';
+    src: url('fonts/galsilr-webfont.woff2') format('woff2'),
+         url('fonts/galsilr-webfont.woff') format('woff'),
+         url('galsilr-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+    }
+
+    .left p{
+      text-align: left;
+      font-size: 20px;
+      margin: 0px;
+      font-family: 'galatia';
+
+    }
+
+    .middle p {
+      text-align: left;
+      font-size: 16px;
+      margin: 0px;
+    }
+
+    .right p {
+      text-align: left;
+      font-size: 16px;
+      margin: 0px;
+    }
+
 
 
   </style>
@@ -74,9 +116,26 @@
 </video>
 <div id="menu">
   <div id="box_group">
-    <div id="box1" class="box"><p>ADAM JONZE</p></div>
-    <div id="box2" class="box"><p>YO DAWG</p></div>
-    <div id="box3" class="box"><p>YO DAWG</p></div>
+    <div id="box1" class="box">
+      <div class="box-inner left">
+        <p>ADAM JONZE</p>
+        <p>This site is an as-and-when-I-can work in progress</p>
+      </div>
+    </div>
+    <div id="box2" class="box">
+      <div class="box-inner middle">
+        <p><u>Work</u></p>
+      </div>
+    </div>
+    <div id="box3" class="box">
+      <div class="box-inner right">
+        <p><u>Info</u></p>
+        <p>github.com/ajze</p>
+        <p>keybase.io/ajze</p>
+        <p>PGP Key: 8B94 3318 40EB 6624</p>
+        <p><u>Chess</u></p>
+      </div>
+    </div>
   </div>
 </div>
 
