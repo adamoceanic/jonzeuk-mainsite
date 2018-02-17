@@ -24,7 +24,7 @@
       background: url(pancha.png) no-repeat;
       background-size: cover; /* was cover */
       -webkit-background-size: cover;
-      -moz-background-size: cover;
+      -moz-background-size: cover;font-family: 'galatia';
       -o-background-size: cover;
     }
 
@@ -54,11 +54,11 @@
     }
     #box2
     {
-      background-color: #CECECE;
+      background-color: #D8D8D8;
     }
     #box3
     {
-      background-color: #CECECE;
+      background-color: #D8D8D8;
     }
 
     #menu
@@ -94,14 +94,37 @@
 
     .middle p {
       text-align: left;
-      font-size: 16px;
+      font-size: 20px;
       margin: 0px;
+      font-family: 'galatia';
+    }
+
+    .middle a {
+
     }
 
     .right p {
       text-align: left;
-      font-size: 16px;
+      font-size: 20px;
       margin: 0px;
+      font-family: 'galatia';
+    }
+
+    a {
+      font-family: 'galatia';
+      font-size: 20px;
+
+    }
+
+    #img-links {
+
+    }
+
+    #img-links img {
+      height: 40px;
+      width: 40px;
+      margin-left: 4px;
+      margin-right: 4px;
     }
 
 
@@ -119,23 +142,40 @@
     <div id="box1" class="box">
       <div class="box-inner left">
         <p>ADAM JONZE</p>
+        <br />
+        <p>Hey, thanks for visiting.</p>
         <p>This site is an as-and-when-I-can work in progress</p>
       </div>
     </div>
     <div id="box2" class="box">
       <div class="box-inner middle">
-        <p><u>Work</u></p>
+        <p>Dev Blog:
+        <a href="https://work.jonze.uk">
+          work.jonze.uk
+        </a>
+        </p>
       </div>
     </div>
     <div id="box3" class="box">
       <div class="box-inner right">
-        <p><u>Info</u></p>
-        <p>github.com/ajze</p>
-        <p>keybase.io/ajze</p>
-        <p>PGP FPT: 8B94 3318 40EB 6624</p>
+        <p><u>Links</u></p>
+        <div id="img-links">
+          <a href="https://github.com/ajze">
+            <img src="img/GitHub64.png" alt="github">
+          </a>
+          <a href="https://keybase.io/ajze">
+            <img src="img/Keybase.png" alt="keybase">
+          </a>
+          <a href="https://keybase.io/ajze">
+            <img src="img/In.png" alt="LinkedIn">
+          </a>
+
+        </div>
+        <p>PGP: 8B94 3318 40EB 6624</p>
         <p><u>Chess</u></p>
         <p>ECF:</p> <!-- find this -->
         <p>FIDE:</p> <!-- find this -->
+        <p>Games:</p> <!-- find this -->
       </div>
     </div>
   </div>
