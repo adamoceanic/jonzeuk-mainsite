@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+    }
+
+    video#bgvid {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -100;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      background: url(pancha.png) no-repeat;
+      background-size: cover; /* was cover */
+      -webkit-background-size: cover;
+      -moz-background-size: cover;font-family: 'galatia';
+      -o-background-size: cover;
+    }
+
+    .box {
+      height: 204px;
+      width: 304px;
+      padding: 8px 8px;
+      margin: 10px;
+      float: left;
+      position: relative;
+    }
+
+    .box-inner {
+      padding: 10px 10px;
+      border-style: solid;
+      border-width: 2px;
+      border-color: #919191;
+      width: 280px;
+      height: 180px;
+      position: absolute;
+
+    }
+
+    #box1
+    {
+      background-color: #D8D8D8; /*FFFEFD C1C0C0*/
+    }
+    #box2
+    {
+      background-color: #D8D8D8;
+    }
+    #box3
+    {
+      background-color: #D8D8D8;
+    }
+
+    #menu
+    {
+      position: absolute;
+      text-align: center;
+      bottom: 10%;
+      width: 100%;
+    }
+
+    #box_group
+    {
+      display: inline-block;
+    }
+
+    @font-face {
+    font-family: 'galatia';
+    src: url('fonts/galsilr-webfont.woff2') format('woff2'),
+         url('fonts/galsilr-webfont.woff') format('woff'),
+         url('galsilr-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+    }
+
+    .left p{
+      text-align: left;
+      font-size: 20px;
+      margin: 0px;
+      font-family: 'galatia';
+
+    }
+
+    .middle p {
+      text-align: left;
+      font-size: 20px;
+      margin: 0px;
+      font-family: 'galatia';
+    }
+
+    .middle a {
+
+    }
+
+    .right p {
+      text-align: left;
+      font-size: 20px;
+      margin: 0px;
+      font-family: 'galatia';
+    }
+
+    a {
+      font-family: 'galatia';
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    #img-links {
+
+    }
+
+    #img-links img {
+      height: 40px;
+      width: 40px;
+      margin-left: 4px;
+      margin-right: 4px;
+    }
+
+
+  </style>
+
+</head>
+<body>
+<video playsinline autoplay muted loop poster="pancha.png" id="bgvid">
+  <source src="2000.webm" type="video/webm">
+  <source src="2000.mp4" type="video/mp4">
+</video>
+<div id="menu">
+  <div id="box_group">
+    <div id="box1" class="box">
+      <div class="box-inner left">
+        <p>ADAM JONZE</p>
+        <br />
+        <p>Hey, thanks for visiting.</p>
+        <p>This site is an as-and-when-I-can work in progress</p>
+      </div>
+    </div>
+    <div id="box2" class="box">
+      <div class="box-inner middle">
+        <p>Dev Blog:
+        <a href="https://work.jonze.uk">
+          work.jonze.uk
+        </a>
+        </p>
+      </div>
+    </div>
+    <div id="box3" class="box">
+      <div class="box-inner right">
+        <p><u>Links</u></p>
+        <div id="img-links">
+          <a href="https://github.com/ajze">
+            <img src="img/GitHub64.png" alt="github">
+          </a>
+          <a href="https://keybase.io/ajze">
+            <img src="img/Keybase.png" alt="keybase">
+          </a><a href="https://linkedin.com">
+            <img src="img/In.png" alt="LinkedIn">
+          </a>
+
+        </div>
+        <p>PGP: 8B94 3318 40EB 6624</p>
+        <p><u>Chess</u></p>
+        <p>ECF:</p> <!-- find this -->
+        <p>FIDE:</p> <!-- find this -->
+        <p>Games:</p> <!-- find this -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
