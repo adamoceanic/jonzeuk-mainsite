@@ -2,6 +2,38 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script type="text/javascript" src="js/jquery-3.3.1.slim.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+     var modal = $("#modal");
+     var modalOverlay = $("#modal-overlay");
+     var closeButton = $("#close-modal");
+     var openButton = $("#open-modal");
+     var ep = $(".e-text");
+     var e0 = "email: "
+     var e1 = "mail";
+     var e2 = "jonze";
+     var e3 = ".io";
+
+     openButton.click(function() {
+       ep.append(e0 + e1 + "@" + e2 + e3);
+       modal.toggleClass("closed");
+       modalOverlay.toggleClass("closed");
+     });
+
+     closeButton.click(function() {
+       ep.empty();
+       modal.toggleClass("closed");
+       modalOverlay.toggleClass("closed");
+     });
+
+     modalOverlay.click(function() {
+       ep.empty();
+       modal.toggleClass("closed");
+       modalOverlay.toggleClass("closed");
+     });
+   });
+</script>
 </head>
 <body>
 <video playsinline autoplay muted loop poster="pancha.png" id="bgvid">
@@ -12,7 +44,7 @@
   <div id="main-sub-window">
 
     <header class="site-header">
-      <div class="wrapper">
+      <div class="wrapper-header">
         <nav class="site-nav">
           <a class="page-link" href="index.html">/home</a>
           <a class="page-link" href="work.html">/work</a>
@@ -23,19 +55,50 @@
     </header>
 
     <div class="page-content">
-
       <div class="title-name">
         <div class="ajze">Work</div>
       </div>
-      <div class="home-content">
+      <div class="home-content-top">
         <div class="message">
-        I am a security cleared developer and researcher. <br />
         I plan on presenting my professional and personal projects portfolio at a high level here. <br />
         An in-depth detailing of each one will be available at my <a href="https://work.jonze.uk">work.jonze.uk</a> blog in the near future.
         </div>
       </div>
     </div>
+    <footer class="site-footer">
+      <div class="wrapper-footer">
+        <div id="img-links">
+          <div id="open-modal" class="img-link">
+            <img src="img/email.png" alt="email">
+          </div>
+          <div class="img-link">
+            <a href="https://github.com/ajze">
+              <img src="img/GitHub64.png" alt="github">
+            </a>
+          </div>
+          <div class="img-link">
+            <a href="https://keybase.io/ajze">
+              <img src="img/Keybase.png" alt="keybase">
+            </a>
+          </div>
+          <div class="img-link">
+            <a href="https://linkedin.com">
+              <img src="img/In.png" alt="LinkedIn">
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
+</div>
+
+<div class="modal closed" id="modal">
+  <div class="e">
+    <p class="e-text"></p>
+    <p>Obfuscated to deter scraping!</p>
+  </div>
+</div>
+<div class="modal-overlay closed" id="modal-overlay">
 </div>
 
 </body>
