@@ -269,7 +269,7 @@ width: auto;
   font-size: 18px;
 }
 
-@media (max-height: 700px) and (orientation:landscape) {
+@media (max-height: 800px) and (orientation:landscape) {
 
   #main-window
   {
