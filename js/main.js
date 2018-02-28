@@ -3,11 +3,8 @@ function loadHeaderFooter() {
   $("#site-header").load("html/header.html");
 }
 
-
 $(document).ready(function() {
-
-  loadHeaderFooter();
-
+  
    var modal = $("#modal");
    var modalOverlay = $("#modal-overlay");
    var closeButton = $("#close-modal");
