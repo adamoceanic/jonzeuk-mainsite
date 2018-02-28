@@ -1,8 +1,4 @@
 $(document).ready(function() {
-
-   $("#site-header").load("../html/header.html");
-   $("#site-footer").load("../html/footer.html");
-
    var modal = $("#modal");
    var modalOverlay = $("#modal-overlay");
    var closeButton = $("#close-modal");
