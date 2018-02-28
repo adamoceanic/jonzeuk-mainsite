@@ -1,30 +1,34 @@
 $(document).ready(function() {
 
-   var modal = $("#modal");
-   var modalOverlay = $("#modal-overlay");
-   var closeButton = $("#close-modal");
-   var openButton = $("#open-modal");
-   var ep = $(".e-text");
-   var e0 = "email: "
-   var e1 = "mail";
-   var e2 = "jonze";
-   var e3 = ".io";
+  $("#site-footer").load("html/footer.html");
+  $("#site-header").load("html/header.html", function(){
 
-   openButton.click(function() {
-     ep.append(e0 + e1 + "@" + e2 + e3);
-     modal.toggleClass("closed");
-     modalOverlay.toggleClass("closed");
-   });
+    var modal = $("#modal");
+    var modalOverlay = $("#modal-overlay");
+    var closeButton = $("#close-modal");
+    var openButton = $("#open-modal");
+    var ep = $(".e-text");
+    var e0 = "email: "
+    var e1 = "mail";
+    var e2 = "jonze";
+    var e3 = ".io";
 
-   closeButton.click(function() {
-     ep.empty();
-     modal.toggleClass("closed");
-     modalOverlay.toggleClass("closed");
-   });
+    openButton.click(function() {
+      ep.append(e0 + e1 + "@" + e2 + e3);
+      modal.toggleClass("closed");
+      modalOverlay.toggleClass("closed");
+    });
 
-   modalOverlay.click(function() {
-     ep.empty();
-     modal.toggleClass("closed");
-     modalOverlay.toggleClass("closed");
-   });
- });
+    closeButton.click(function() {
+      ep.empty();
+      modal.toggleClass("closed");
+      modalOverlay.toggleClass("closed");
+    });
+
+    modalOverlay.click(function() {
+      ep.empty();
+      modal.toggleClass("closed");
+      modalOverlay.toggleClass("closed");
+    });
+  });
+});
