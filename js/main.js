@@ -1,8 +1,4 @@
-
-
 $(document).ready(function() {
-
-  alert("document.ready starting");
 
    var modal = $("#modal");
    var modalOverlay = $("#modal-overlay");
