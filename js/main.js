@@ -1,4 +1,4 @@
-$(window).load(function() {
+$(document).ready(function() {
    var modal = $("#modal");
    var modalOverlay = $("#modal-overlay");
    var closeButton = $("#close-modal");
@@ -8,6 +8,9 @@ $(window).load(function() {
    var e1 = "mail";
    var e2 = "jonze";
    var e3 = ".io";
+
+   $("#site-header").load("../html/header.html");
+   $("#site-footer").load("../html/footer.html");
 
    openButton.click(function() {
      ep.append(e0 + e1 + "@" + e2 + e3);

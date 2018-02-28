@@ -5,6 +5,42 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/header-footer.js"></script>
+  <!--<script type="text/javascript" src="js/main.js"></script> -->
+  <script type="text/javascript">
+  $(document).ready(function() {
+     var modal = $("#modal");
+     var modalOverlay = $("#modal-overlay");
+     var closeButton = $("#close-modal");
+     var openButton = $("#open-modal");
+     var ep = $(".e-text");
+     var e0 = "email: "
+     var e1 = "mail";
+     var e2 = "jonze";
+     var e3 = ".io";
+
+     $("#site-header").load("../html/header.html");
+     $("#site-footer").load("../html/footer.html");
+
+     openButton.click(function() {
+       ep.append(e0 + e1 + "@" + e2 + e3);
+       modal.toggleClass("closed");
+       modalOverlay.toggleClass("closed");
+     });
+
+     closeButton.click(function() {
+       ep.empty();
+       modal.toggleClass("closed");
+       modalOverlay.toggleClass("closed");
+     });
+
+     modalOverlay.click(function() {
+       ep.empty();
+       modal.toggleClass("closed");
+       modalOverlay.toggleClass("closed");
+     });
+   });
+  </script>
+
 </head>
 <body>
 <video playsinline autoplay muted loop poster="img/pancha.png" id="bgvid">
@@ -66,7 +102,7 @@
 <div class="modal-overlay closed" id="modal-overlay">
 </div>
 
-<script type="text/javascript" src="js/main.js"></script>
+
 </body>
 
 </html>
