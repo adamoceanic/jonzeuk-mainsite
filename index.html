@@ -4,37 +4,7 @@
   <link rel="icon" href="img/favicon.ico">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script type="text/javascript" src="js/jquery-3.3.1.slim.min.js"></script>
-  <script type="text/javascript">
-  $(document).ready(function() {
-     var modal = $("#modal");
-     var modalOverlay = $("#modal-overlay");
-     var closeButton = $("#close-modal");
-     var openButton = $("#open-modal");
-     var ep = $(".e-text");
-     var e0 = "email: "
-     var e1 = "mail";
-     var e2 = "jonze";
-     var e3 = ".io";
-
-     openButton.click(function() {
-       ep.append(e0 + e1 + "@" + e2 + e3);
-       modal.toggleClass("closed");
-       modalOverlay.toggleClass("closed");
-     });
-
-     closeButton.click(function() {
-       ep.empty();
-       modal.toggleClass("closed");
-       modalOverlay.toggleClass("closed");
-     });
-
-     modalOverlay.click(function() {
-       ep.empty();
-       modal.toggleClass("closed");
-       modalOverlay.toggleClass("closed");
-     });
-   });
-</script>
+  <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 <video playsinline autoplay muted loop poster="pancha.png" id="bgvid">
@@ -44,16 +14,7 @@
 <div id="main-window">
   <div id="main-sub-window">
 
-    <header class="site-header">
-      <div class="wrapper-header">
-        <nav class="site-nav">
-          <a class="page-link" href="/">/home</a>
-          <a class="page-link" href="/work">/work</a>
-          <a class="page-link" href="/">/life</a>
-          <a class="page-link" href="/">/links</a>
-        </nav>
-      </div>
-    </header>
+    <header id="site-header"></header>
 
     <div class="page-content">
       <div class="title-name">
@@ -74,35 +35,13 @@
         <ul style="list-style-type:disc">
           <li>Main tech: Modern C++ (11/14/17), Python 3, Matlab.</li>
           <li>Supporting tech: Rust, Bash, C, JS, AWS.</li>
-          <li>Built and deployed Neural net, SVM/Kernel, Gradient Boosted Tree, and K-means based machine learning models.</li>
+          <li>Built and deployed Neural net, Kernelized SVM, Gradient Boosted Tree, and K-means based machine learning models.</li>
+          <li>Agile Certified</li>
         </ul>
       </div>
     </div>
 
-    <footer class="site-footer">
-      <div class="wrapper-footer">
-        <div id="img-links">
-          <div id="open-modal" class="img-link">
-            <img src="img/email.png" alt="email">
-          </div>
-          <div class="img-link">
-            <a href="https://github.com/ajze">
-              <img src="img/GitHub64.png" alt="github">
-            </a>
-          </div>
-          <div class="img-link">
-            <a href="https://keybase.io/ajze">
-              <img src="img/Keybase.png" alt="keybase">
-            </a>
-          </div>
-          <div class="img-link">
-            <a href="https://linkedin.com">
-              <img src="img/In.png" alt="LinkedIn">
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <footer id="site-footer"></footer>
   </div>
 </div>
 <div class="modal closed" id="modal">

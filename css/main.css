@@ -32,30 +32,9 @@ video#bgvid {
   background: url(pancha.png) no-repeat;
   background-size: cover; /* was cover */
   -webkit-background-size: cover;
-  -moz-background-size: cover;font-family: 'galatia';
+  -moz-background-size: cover;
   -o-background-size: cover;
 }
-
-/*
-.box {
-  height: 204px;
-  width: 304px;
-  padding: 8px 8px;
-  margin: 10px;
-  float: left;
-  position: relative;
-}
-
-.box-inner {
-  padding: 10px 10px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #919191;
-  width: 280px;
-  height: 180px;
-  position: absolute;
-}
-*/
 
 #main-window
 {
@@ -105,7 +84,7 @@ video#bgvid {
   flex-direction: column;
 }
 
-.site-header {
+#site-header {
   width: auto;
   min-height: 50px;
   order: 0;
@@ -209,7 +188,7 @@ font-weight: normal;
 font-style: normal;
 }
 
-.site-footer {
+#site-footer {
   order: 2;
   width: auto;
   min-height: 50px;
@@ -321,6 +300,4 @@ width: auto;
     -webkit-flex-direction: column;
     flex-direction: column;
   }
-
-
 }
