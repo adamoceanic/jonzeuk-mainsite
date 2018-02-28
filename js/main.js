@@ -12,6 +12,7 @@ $(document).ready(function() {
    $("#site-header").load("../html/header.html");
    $("#site-footer").load("../html/footer.html");
 
+   alert("test");
    openButton.click(function() {
      ep.append(e0 + e1 + "@" + e2 + e3);
      modal.toggleClass("closed");
