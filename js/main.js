@@ -8,7 +8,7 @@ $(window).load(function() {
    var e1 = "mail";
    var e2 = "jonze";
    var e3 = ".io";
-  
+
    openButton.click(function() {
      ep.append(e0 + e1 + "@" + e2 + e3);
      modal.toggleClass("closed");
