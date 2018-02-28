@@ -2,7 +2,7 @@ $(document).ready(function() {
    var modal = $("#modal");
    var modalOverlay = $("#modal-overlay");
    var closeButton = $("#close-modal");
-   var openButton = $("#open-modal");
+   var openButton = $("#headshot");
    var ep = $(".e-text");
    var e0 = "email: "
    var e1 = "mail";
