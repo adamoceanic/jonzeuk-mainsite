@@ -1,8 +1,12 @@
 $(document).ready(function() {
+
+  $("#site-header").load("html/header.html");
+  $("#site-footer").load("html/footer.html");
+
    var modal = $("#modal");
    var modalOverlay = $("#modal-overlay");
    var closeButton = $("#close-modal");
-   var openButton = $("#headshot");
+   var openButton = $("#open-modal");
    var ep = $(".e-text");
    var e0 = "email: "
    var e1 = "mail";
