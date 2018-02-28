@@ -9,10 +9,8 @@ $(document).ready(function() {
    var e2 = "jonze";
    var e3 = ".io";
 
-   $(function(){
-      $(".site-header").load("html/header.html");
-      $(".site-footer").load("html/footer.html");       
-    });
+   $(".site-header").load("html/header.html");
+   $(".site-footer").load("html/footer.html");
 
    openButton.click(function() {
      ep.append(e0 + e1 + "@" + e2 + e3);

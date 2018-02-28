@@ -29,7 +29,7 @@ video#bgvid {
   -moz-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: url(pancha.png) no-repeat;
+  background: url(../img/pancha.png) no-repeat;
   background-size: cover; /* was cover */
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -181,9 +181,9 @@ a:hover {
 
 @font-face {
 font-family: 'galatia';
-src: url('fonts/galsilr-webfont.woff2') format('woff2'),
-     url('fonts/galsilr-webfont.woff') format('woff'),
-     url('galsilr-webfont.ttf') format('truetype');
+src: url('../fonts/galsilr-webfont.woff2') format('woff2'),
+     url('../fonts/galsilr-webfont.woff') format('woff'),
+     url('../galsilr-webfont.ttf') format('truetype');
 font-weight: normal;
 font-style: normal;
 }
