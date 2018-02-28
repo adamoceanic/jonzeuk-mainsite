@@ -1,7 +1,12 @@
+function loadHeaderFooter() {
+  $("#site-footer").load("html/footer.html");
+  $("#site-header").load("html/header.html");
+}
+
+
 $(document).ready(function() {
 
-  $("#site-header").load("html/header.html");
-  $("#site-footer").load("html/footer.html");
+  loadHeaderFooter();
 
    var modal = $("#modal");
    var modalOverlay = $("#modal-overlay");
