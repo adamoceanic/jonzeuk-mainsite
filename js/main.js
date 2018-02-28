@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).load(function() {
    var modal = $("#modal");
    var modalOverlay = $("#modal-overlay");
    var closeButton = $("#close-modal");
@@ -8,11 +8,7 @@ $(document).ready(function() {
    var e1 = "mail";
    var e2 = "jonze";
    var e3 = ".io";
-
-   $("#site-header").load("../html/header.html");
-   $("#site-footer").load("../html/footer.html");
-
-   alert("test");
+  
    openButton.click(function() {
      ep.append(e0 + e1 + "@" + e2 + e3);
      modal.toggleClass("closed");
