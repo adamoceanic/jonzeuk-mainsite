@@ -1,10 +1,9 @@
-function loadHeaderFooter() {
-  $("#site-footer").load("html/footer.html");
-  $("#site-header").load("html/header.html");
-}
+
 
 $(document).ready(function() {
-  
+
+  alert("document.ready starting");
+
    var modal = $("#modal");
    var modalOverlay = $("#modal-overlay");
    var closeButton = $("#close-modal");

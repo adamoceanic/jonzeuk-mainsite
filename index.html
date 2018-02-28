@@ -4,7 +4,14 @@
   <link rel="icon" href="img/favicon.ico">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
+  <script>
+  function loadHeaderFooter() {
+    alert("loadHeaderFooter called");
+    $("#site-footer").load("html/footer.html");
+    $("#site-header").load("html/header.html");
+  }
+  </script>
+
 </head>
 <body>
 <video playsinline autoplay muted loop poster="img/pancha.png" id="bgvid">
@@ -66,7 +73,7 @@
 <div class="modal-overlay closed" id="modal-overlay">
 </div>
 
-<script>loadHeaderFooter();</script>
-
+<script type="text/javascript">loadHeaderFooter();</script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
