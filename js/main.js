@@ -10,8 +10,8 @@ $(document).ready(function() {
    var e3 = ".io";
 
    $(function(){
-      $(".site-header").load("header.html");
-      $(".site-footer").load("footer.html");       
+      $(".site-header").load("html/header.html");
+      $(".site-footer").load("html/footer.html");       
     });
 
    openButton.click(function() {
