@@ -129,7 +129,7 @@ a:hover {
    color:black!important;
  }
 
-.page-content {
+#page-content {
   background: white;
   padding-left: 14px;
   padding-right: 14px;
@@ -149,28 +149,42 @@ a:hover {
   flex-direction: column;
 }
 
-.title-name {
+#home-content-top {
   order: 1;
+  font-family: sans-serif;
+  font-size: 16px;
 }
-.ajze {
+
+#title-bio {
+  float: left;
+  width: 450px;
+  margin-right: 10px;  
+}
+
+#title-name {
   font-family: 'galatia';
   font-size: 24px;
   line-height: 40px;
 }
 
-.home-content-top {
-  order: 2;
+#home-content-bio {
   font-family: sans-serif;
   font-size: 16px;
 }
+
+#headshot {
+  float: left;
+}
+
+
 
 .blog-link-temp{
   font-family: sans-serif;
   font-size: 16px;
 }
 
-.home-content-skills {
-  order: 3;
+#home-content-skills {
+  order: 2;
   font-family: sans-serif;
   font-size: 16px;
 }
