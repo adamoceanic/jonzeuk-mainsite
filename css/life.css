@@ -157,7 +157,8 @@ video#bgvid {
 #reading-list-title {
   font-family: sans-serif;
   font-size: 16px;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 #books {
@@ -295,6 +296,7 @@ width: auto;
 
 .e-text {
   font-size: 18px;
+  font-weight: bold;
   text-align: center;
 }
 
