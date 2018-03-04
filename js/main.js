@@ -3,6 +3,53 @@ $(document).ready(function() {
   $("#site-footer").load("html/footer.html");
   $("#site-header").load("html/header.html", function(){
 
+    $(".book0").flip({
+      trigger: 'hover'
+    });
+    $(".book1").flip({
+      trigger: 'hover'
+    });
+    $(".book2").flip({
+      trigger: 'hover'
+    });
+    $(".book3").flip({
+      trigger: 'hover'
+    });
+    $(".book4").flip({
+      trigger: 'hover'
+    });
+    $(".book5").flip({
+      trigger: 'hover'
+    });
+    $(".book6").flip({
+      trigger: 'hover'
+    });
+    $(".book7").flip({
+      trigger: 'hover'
+    });
+    $(".book8").flip({
+      trigger: 'hover'
+    });
+    $(".book9").flip({
+      trigger: 'hover'
+    });
+    $(".book10").flip({
+      trigger: 'hover'
+    });
+    $(".book11").flip({
+      trigger: 'hover'
+    });
+    $(".book12").flip({
+      trigger: 'hover'
+    });
+    $(".book13").flip({
+      trigger: 'hover'
+    });
+    $(".book14").flip({
+      trigger: 'hover'
+    });
+
+
     var modal = $("#modal");
     var modalOverlay = $("#modal-overlay");
     var closeButton = $("#close-modal");
@@ -30,5 +77,7 @@ $(document).ready(function() {
       modal.toggleClass("closed");
       modalOverlay.toggleClass("closed");
     });
+
+
   });
 });

@@ -116,15 +116,16 @@ video#bgvid {
   float: left;
 }
 
-a:link {
+.site-nav a:link {
   text-decoration: none!important;
   color: #707070!important;
 }
-a:visited {
+.site-nav a:visited {
   text-decoration: none!important;
   color: #707070!important;
 }
-a:hover {
+
+.site-nav a:hover {
    text-decoration: none;
    color:black!important;
  }
@@ -149,39 +150,72 @@ a:hover {
   flex-direction: column;
 }
 
-#home-content-top {
+#reading-list {
   order: 1;
+}
+
+#reading-list-title {
   font-family: sans-serif;
   font-size: 16px;
+  margin-bottom: 4px;
 }
 
-#title-bio {
-  float: left;
-  width: 450px;
-  margin-right: 10px;
+#books {
+  width: 620px;
+  height: 492px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#title-name {
-  font-family: 'galatia';
-  font-size: 24px;
-  line-height: 40px;
+.books-row1 {
+    float: left;
 }
 
-#home-content-bio {
+.books-row2 {
+     float: left;
+}
+
+.books-row3 {
+     float: left;
+}
+.books-thumbnail-div {
+    width: 118px;
+    height: 180px;
+    margin: 1px 1px 1px 1px;
+    padding: 2px 2px 2px 2px;
+}
+
+.books-thumbnail {
+    width: 118px;
+    height: 180px;
+}
+
+.back {
+    background-color: #C3BCBC;
+    width: 118px;
+    height: 180px;
+}
+
+.back a{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
   font-family: sans-serif;
-  font-size: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  text-decoration: none!important;
 }
 
-#headshot {
-  float: left;
+.back a .azm-link {
+  margin-left: 4px;
+  margin-top: 44px;
+  text-align: center;
 }
 
-.blog-link-temp{
-  font-family: sans-serif;
-  font-size: 16px;
-}
-
-#home-content-skills {
+#chess-section {
   order: 2;
   font-family: sans-serif;
   font-size: 16px;

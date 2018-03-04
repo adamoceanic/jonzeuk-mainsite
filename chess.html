@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/life.css">
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+</head>
+<body>
+<video playsinline autoplay muted loop poster="img/pancha.png" id="bgvid">
+  <source src="2000.webm" type="video/webm">
+  <source src="2000.mp4" type="video/mp4">
+</video>
+<div id="main-window">
+  <div id="main-sub-window">
+
+    <header id="site-header"></header>
+
+    <div id="page-content">
+
+      <div id="reading-list">
+
+        <div id="reading-list-title">I'm an avid reader and below are some of
+           the titles I'm either working through or are ready on my reading list.
+            Topics include mathematics, ML, programming, and chess.
+        </div>
+
+        <div id="books">
+
+          <div class="books-row1 books-thumbnail-div book0">
+            <div class="front">
+              <img src="img/algolive.png" class="books-thumbnail"/>
+            </div>
+            <div class="back">
+                <a href="https://www.amazon.co.uk/Algorithms-Live-Computer-Science-Decisions/dp/0007547994">
+                  <div class="azm-link">
+                  CLICK<br />FOR<br />AMAZON<br />
+                  </div>
+                </a>
+            </div>
+          </div>
+
+          <div class="books-row1 books-thumbnail-div book1">
+            <div class="front">
+              <img src="img/quantfin.png" class="books-thumbnail"/>
+            </div>
+            <div class="back">
+              <a href="https://www.amazon.co.uk/Quantitative-Finance-Dummies-Steve-DPhil/dp/1118769465">
+                <div class="azm-link">
+                CLICK<br />FOR<br />AMAZON<br />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="books-row1 books-thumbnail-div book2">
+            <div class="front">
+              <img src="img/superint.png" class="books-thumbnail"/>
+            </div>
+            <div class="back">
+              <a href="https://www.amazon.co.uk/Superintelligence-Dangers-Strategies-Nick-Bostrom/dp/0198739834">
+                <div class="azm-link">
+                CLICK<br />FOR<br />AMAZON<br />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="books-row1 books-thumbnail-div book3">
+            <div class="front">
+              <img src="img/artint.jpg" class="books-thumbnail"/>
+            </div>
+            <div class="back">
+              <a href="https://www.amazon.co.uk/Artificial-Intelligence-Modern-Approach-Global/dp/1292153962">
+                <div class="azm-link">
+                CLICK<br />FOR<br />AMAZON<br />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="books-row1 books-thumbnail-div book4">
+            <div class="front">
+              <img src="img/deepthink.jpg" class="books-thumbnail"/>
+            </div>
+            <div class="back">
+              <a href="https://www.amazon.co.uk/Deep-Thinking-Machine-Intelligence-Creativity/dp/1473653509">
+                <div class="azm-link">
+                CLICK<br />FOR<br />AMAZON<br />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="books-row2 books-thumbnail-div book5">
+            <div class="front">
+              <img src="img/mathfin.jpg" class="books-thumbnail"/>
+            </div>
+            <div class="back">
+              <a href="https://www.amazon.co.uk/Mathematics-Financial-Engineering-Advanced-Background/dp/0979757622">
+                <div class="azm-link">
+                CLICK<br />FOR<br />AMAZON<br />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="books-row2 books-thumbnail-div book6">
+            <div class="front">
+              <img src="img/lifechess.jpg" class="books-thumbnail"/>
+            </div>
+            <div class="back">
+              <a href="https://www.amazon.co.uk/Life-Imitates-Chess-Garry-Kasparov/dp/0099489864">
+                <div class="azm-link">
+                CLICK<br />FOR<br />AMAZON<br />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="books-row2 books-thumbnail-div book7">
+            <div class="front">
+              <img src="img/neuro.jpg" class="books-thumbnail"/>
+            </div>
+            <div class="back">
+              <a href="https://www.amazon.co.uk/Neuromancer-S-F-Masterworks-William-Gibson/dp/1473217385">
+                <div class="azm-link">
+                CLICK<br />FOR<br />AMAZON<br />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="books-row2 books-thumbnail-div book8">
+            <div class="front">
+              <img src="img/moneygod.jpg" class="books-thumbnail"/>
+            </div>
+            <div class="back">
+              <a href="https://www.amazon.co.uk/More-Money-Than-God-Making/dp/1408809753">
+                <div class="azm-link">
+                CLICK<br />FOR<br />AMAZON<br />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="books-row2 books-thumbnail-div book9">
+            <div class="front">
+              <img src="img/mba.jpg" class="books-thumbnail"/>
+            </div>
+            <div class="back">
+              <a href="https://www.amazon.co.uk/Personal-MBA-World-Class-Business-Education/dp/0670919535">
+                <div class="azm-link">
+                CLICK<br />FOR<br />AMAZON<br />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="books-row3 books-thumbnail-div book10">
+            <div class="front">
+              <img src="img/pythondata.jpg" class="books-thumbnail"/>
+            </div>
+            <div class="back">
+              <a href="https://www.amazon.co.uk/Python-Data-Analysis-Wes-Mckinney/dp/1491957662">
+                <div class="azm-link">
+                CLICK<br />FOR<br />AMAZON<br />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="books-row3 books-thumbnail-div book11">
+            <div class="front">
+              <img src="img/moneymachine.jpg" class="books-thumbnail"/>
+            </div>
+            <div class="back">
+              <a href="https://www.amazon.co.uk/Money-Machine-How-City-Works/dp/0141980737">
+                <div class="azm-link">
+                CLICK<br />FOR<br />AMAZON<br />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="books-row3 books-thumbnail-div book12">
+            <div class="front">
+              <img src="img/turing.jpg" class="books-thumbnail"/>
+            </div>
+            <div class="back">
+              <a href="https://www.amazon.co.uk/Annotated-Turing-Through-Historic-Computability/dp/0470229055">
+                <div class="azm-link">
+                CLICK<br />FOR<br />AMAZON<br />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="books-row3 books-thumbnail-div book13">
+            <div class="front">
+              <img src="img/everydayc.jpg" class="books-thumbnail"/>
+            </div>
+            <div class="back">
+              <a href="https://www.amazon.co.uk/Everyday-Cryptography-Fundamental-Principles-Applications/dp/0198788010">
+                <div class="azm-link">
+                CLICK<br />FOR<br />AMAZON<br />
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="books-row3 books-thumbnail-div book14">
+            <div class="front">
+              <img src="img/zeroone.jpg" class="books-thumbnail"/>
+            </div>
+            <div class="back">
+              <a href="https://www.amazon.co.uk/Zero-One-Notes-Start-Future/dp/0753555204">
+                <div class="azm-link">
+                CLICK<br />FOR<br />AMAZON<br />
+                </div>
+              </a>
+            </div>
+          </div>
+
+
+        </div> <!-- books -->
+
+      </div> <!-- reading-list -->
+
+      <div id="chess-section">
+
+      </div>
+    </div> <!-- page-content -->
+
+    <footer id="site-footer"></footer>
+
+  </div>
+</div>
+
+<div class="modal closed" id="modal">
+  <div class="e">
+    <p class="e-text"></p>
+    <p> Obfuscated to deter scraping!</p>
+  </div>
+</div>
+<div class="modal-overlay closed" id="modal-overlay">
+</div>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
