@@ -3,7 +3,6 @@ $(document).ready(function() {
   $("#site-footer").load("html/footer.html");
   $("#site-header").load("html/header.html", function(){
 
-    alert("header func hit");
     var modal = $("#modal");
     var modalOverlay = $("#modal-overlay");
     var closeButton = $("#close-modal");
@@ -31,7 +30,5 @@ $(document).ready(function() {
       modal.toggleClass("closed");
       modalOverlay.toggleClass("closed");
     });
-
-    alert("end of header func hit");
   });
 });

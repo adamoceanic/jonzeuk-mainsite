@@ -178,6 +178,7 @@ video#bgvid {
 .books-row3 {
      float: left;
 }
+
 .books-thumbnail-div {
     width: 118px;
     height: 180px;
@@ -345,5 +346,16 @@ width: auto;
     -ms-flex-direction: column;
     -webkit-flex-direction: column;
     flex-direction: column;
+  }
+
+  #books {
+    width: 620px;
+    height: 372px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .books-row3 {
+       display: none;
   }
 }
