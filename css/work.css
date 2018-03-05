@@ -204,13 +204,17 @@ a:hover {
   top: 0;
 }
 
+.front p {
+  margin: 4px 0px 0px 6px;
+}
+
 .blog-click p {
   font-family: sans-serif;
   font-weight: bold;
   font-size: 20px;
   color: black;
   text-decoration: none!important;
-  margin: 0px;
+  margin: 6px 0px 0px 6px;
   width: 100%;
 }
 
