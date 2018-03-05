@@ -2,8 +2,7 @@
 <html>
 <head>
   <link rel="icon" href="img/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-
+  <link rel="stylesheet" type="text/css" href="css/work.css">
 </head>
 <body>
 <video playsinline autoplay muted loop poster="img/pancha.png" id="bgvid">
@@ -16,17 +15,48 @@
     <header id="site-header"></header>
 
     <div id="page-content">
+
       <div id="title-name">
-        <div class="ajze">Work</div>
+        <div class="ajze">Work and Projects</div>
       </div>
-      <div id="home-content-top">
+      <div id="work-content-top">
         <div class="message">
         I plan on presenting my professional and personal projects portfolio at a high level here. <br />
         An in-depth detailing of each one will be available at my <a href="https://work.jonze.uk">work.jonze.uk</a> blog in the near future.
         </div>
       </div>
-    </div>
+      <div id="work-content-links">
 
+        <div class="blog-link bl1">
+          <div class="front">
+            &#183; FLUENT-BUILDER VS INTERFACE STYLE
+          </div>
+          <div class="back">
+            <a href="https://work.jonze.uk/index.php/2018/02/26/fluent-builder/">
+              <div class="blog-click">
+                <p>CLICK FOR BLOG POST</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="blog-link bl2">
+          <div class="front">
+            &#183; VIGENERE VICTORY
+          </div>
+          <div class="back">
+            <a href="https://work.jonze.uk/index.php/2018/02/25/vigenere-victory/">
+              <div class="blog-click">
+                <p>CLICK FOR BLOG POST</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
     <footer id="site-footer"></footer>
 
   </div>
@@ -42,6 +72,22 @@
 </div>
 
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.flip.min.js"></script>
+<script type="text/javascript">
+$(function() {
+  $(".bl1").flip({
+    axis: 'x',
+    trigger: 'hover',
+    speed: 390
+  });
+
+  $(".bl2").flip({
+    axis: 'x',
+    trigger: 'hover',
+    speed: 390
+  });
+});
+</script>
 <script type="text/javascript" src="js/main.js"></script>
 
 </body>
