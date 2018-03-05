@@ -46,7 +46,7 @@ video#bgvid {
   height: 760px;
   background: white;
   position: relative;
-  overflow: auto;
+  overflow: hidden;
 
   /*
   border-style: inset;

@@ -1,6 +1,6 @@
 body
 {
-    background-image: url("../img/flags3.jpg");
+    background-image: url("../img/pancha.png");
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
@@ -46,7 +46,8 @@ video#bgvid {
   height: 760px;
   background: white;
   position: relative;
-  overflow: auto;
+  overflow: hidden;
+  /* was auto */
 
   /*
   border-style: inset;
