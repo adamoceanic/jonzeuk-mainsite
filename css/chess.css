@@ -164,6 +164,9 @@ video#bgvid {
   margin-right: auto;
 }
 
+#board {
+  width: 400px;
+}
 
 @font-face {
 font-family: 'galatia';
@@ -288,14 +291,7 @@ width: auto;
     flex-direction: column;
   }
 
-  #books {
-    width: 620px;
-    height: 372px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .books-row3 {
-       display: none;
+  #board {
+    width: 300px;
   }
 }
