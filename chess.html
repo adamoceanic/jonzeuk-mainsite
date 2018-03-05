@@ -2,9 +2,8 @@
 <html>
 <head>
   <link rel="icon" href="img/favicon.ico">
-  <link rel="stylesheet" type="text/css" href="css/life.css">
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="js/jquery.flip.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/chess.css">
+  <link rel="stylesheet" type="text/css" href="css/chessboard-0.3.0.min.css">
 </head>
 <body>
 <video playsinline autoplay muted loop poster="img/pancha.png" id="bgvid">
@@ -18,13 +17,18 @@
 
     <div id="page-content">
 
-      <div id="reading-list">
+      <div id="chess-title">
+        I am a Kent County and Maidstone teams chess player and chess fanatic. Below I am using the excellent
+        <a href="https://github.com/jhlywa/chess.js">chess.js</a> and
+        <a href="http://chessboardjs.com">chessboard.js</a> scripts to display
+        the real-time progress of a game of Chess960 I'm currently playing. <br />
+        I plan on expanding this page significantly to include multiple games, a
+        game archive, and experiment with some APIs for various chess services and
+        technologies.
+      </div> <!-- chess-title -->
 
-        Chess yeahhhh
-      </div> <!-- reading-list -->
-
-      <div id="chess-section">
-
+      <div id="chess-board">
+        <div id="board" style="width: 400px"></div>
       </div>
     </div> <!-- page-content -->
 
@@ -41,6 +45,8 @@
 </div>
 <div class="modal-overlay closed" id="modal-overlay">
 </div>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/chessboard-0.3.0.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

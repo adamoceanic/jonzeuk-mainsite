@@ -1,0 +1,301 @@
+body
+{
+    background-image: url("../img/flags3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    background: #000;
+}
+
+#main
+{
+    background-color: white;
+    opacity: 0.8;
+    height: 600px;
+    margin: 16px 0 0 16px;
+
+}
+
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(../img/pancha.png) no-repeat;
+  background-size: cover; /* was cover */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+#main-window
+{
+  width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 110px;
+
+  height: 760px;
+  background: white;
+  position: relative;
+  overflow: auto;
+
+  /*
+  border-style: inset;
+  border-color: #COCOCO;
+  */
+  -webkit-box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.55);
+  -moz-box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.55);
+  box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.55);
+}
+
+#main-sub-window
+{
+  width: 688px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 4px;
+  position: relative;
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e8e8e8; /*#919191*/
+
+  height: 748px;
+  background: white;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+#site-header {
+  width: auto;
+  min-height: 50px;
+  order: 0;
+}
+
+.wrapper-header {
+  margin-left: 14px;
+  margin-right: 14px;
+  min-height: 40px;
+  border-bottom: 0.5px solid #e8e8e8;
+}
+.wrapper-footer {
+  margin-left: 14px;
+  margin-right: 14px;
+  min-height: 40px;
+  border-top: 0.5px solid #e8e8e8;
+}
+
+.site-nav {
+  font-family: inconsolata,monospace;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 40px;
+  color: #707070!important;
+  text-decoration: none!important;
+  /*padding: 6px 0px 6px 6px;*/
+  position: relative;
+  width: auto;
+  float: left;
+}
+
+.site-nav a:link {
+  text-decoration: none!important;
+  color: #707070!important;
+}
+.site-nav a:visited {
+  text-decoration: none!important;
+  color: #707070!important;
+}
+
+.site-nav a:hover {
+   text-decoration: none;
+   color:black!important;
+ }
+
+#page-content {
+  background: white;
+  padding-left: 14px;
+  padding-right: 14px;
+
+  order: 1;
+  flex-grow: 1;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+#chess-title {
+  order: 1;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+#chess-board {
+  order: 2;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@font-face {
+font-family: 'galatia';
+src: url('../fonts/galsilr-webfont.woff2') format('woff2'),
+     url('../fonts/galsilr-webfont.woff') format('woff'),
+     url('../galsilr-webfont.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+#site-footer {
+  order: 2;
+  width: auto;
+  min-height: 50px;
+}
+
+#img-links {
+margin-left: 35%;
+margin-right: auto;
+margin-top: 10px;
+width: auto;
+}
+
+.img-link {
+  margin-left: 4px;
+  margin-right: 4px;
+  float: left;
+}
+
+.img-link img {
+  height: 40px;
+  width: 40px;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  max-width: 100%;
+  height: 80px;
+  max-height: 100%;
+  z-index: 1010;
+  display: flex;
+
+  background-color: white;
+}
+
+.modal.closed {
+   display: none;
+}
+
+.modal-overlay.closed {
+   display: none;
+}
+
+.modal-overlay {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity:0.7 !important;
+}
+
+.e-text {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-height: 800px) and (orientation:landscape) {
+
+  #main-window
+  {
+    width: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 70px;
+
+    height: 600px;
+    background: white;
+    position: relative;
+    overflow: auto;
+
+    /*
+    border-style: inset;
+    border-color: #COCOCO;
+    */
+    -webkit-box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.55);
+    -moz-box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.55);
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.55);
+  }
+
+  #main-sub-window
+  {
+    width: 688px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 4px;
+    position: relative;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e8e8e8; /*#919191*/
+
+    height: 588px;
+    background: white;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  #books {
+    width: 620px;
+    height: 372px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .books-row3 {
+       display: none;
+  }
+}

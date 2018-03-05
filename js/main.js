@@ -30,5 +30,11 @@ $(document).ready(function() {
       modal.toggleClass("closed");
       modalOverlay.toggleClass("closed");
     });
+
+    var current_game1 = 'qr4r1/p1p2p1k/1p1p4/6p1/2P4n/1B1PN3/PP1P4/3Q2KR w - - 2 20';
+    var board = ChessBoard('board', {
+      position: current_game1,
+      showNotation: false
+    });
   });
 });
