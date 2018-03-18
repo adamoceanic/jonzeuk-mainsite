@@ -299,4 +299,8 @@ width: auto;
   #board {
     width: 300px;
   }
+
+  #move-history {
+    display: none;
+  }
 }
