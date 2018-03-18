@@ -168,6 +168,11 @@ video#bgvid {
   width: 400px;
 }
 
+#move-history {
+  width: 400px;
+}
+
+
 @font-face {
 font-family: 'galatia';
 src: url('../fonts/galsilr-webfont.woff2') format('woff2'),
