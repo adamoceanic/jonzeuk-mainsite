@@ -166,10 +166,13 @@ video#bgvid {
 
 #board {
   width: 400px;
+  float: left;
 }
 
 #move-history {
-  width: 400px;
+  width: 100px;
+  float: left;
+  margin-left: 10px;
 }
 
 
