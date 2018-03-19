@@ -23,7 +23,7 @@ $(document).ready(function() {
   cb.move('Bc4');
   cb.move('Ne5');
 
-  console.log(chess.ascii());
+  console.log(cb.ascii());
 });
 
   var board = ChessBoard('board', {
