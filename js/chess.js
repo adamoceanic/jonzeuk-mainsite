@@ -2,6 +2,9 @@ var current_position = '';
 var board_orientation = '';
 var moves = '';
 var opponent = 'anebir';
+var moves_arr;
+var move_pair;
+var fen_history_arr;
 var chess_data;
 
 /*
@@ -12,8 +15,6 @@ JSON THIS INTO A REST API EVENTUALLY WITH PYTHON RUNNING ON AWS!
 */
 
 $(document).ready(function() {
-
-
 
   var board = ChessBoard('board', {
     position: 'start',
@@ -27,53 +28,91 @@ $(document).ready(function() {
 
   function processData(chess_data) {
     chess_data.games.some(function(game){
-      if (game['white'].indexOf(opponent) != -1
-      || game['black'].indexOf(opponent) != -1) {
-
+      if (game['white'].indexOf(opponent) != -1 || game['black'].indexOf(opponent) != -1) {
         moves = game['pgn'].split(/\n/).slice(-1)[0];
+        moves_arr = moves.split(/\d+[.]/g);
+
+        for (i = 1; i < moves_arr.length; ++i) {
+          move_pair = moves_arr[i].trim();
+          moves_arr[i] = move_pair.split(/\s/g);
+
+          // remove weird asterisk when not waiting for b move
+          if (moves_arr[i].length > 2) {
+            moves_arr[i].pop();
+          }
+        }
         current_position = game['fen'];
         return true;
       }
     });
   }
 
+// coming later
+  /*
+  function createFenHistory() {
+    for (i = 1; i < moves_arr.length; ++i) {
+      for (i = 1; i < moves_arr[i].length; ++i) {
+
+      }
+    }
+  }
+  */
+
   function processMoves() {
 
-    // if empty ..
-    // if less than 10 etc...
+    // if empty edge cases need sorting etc..
 
-    var moves_arr = moves.split(/\d+[.]/g);
     var hook_id;
-    var hook;
+    var scrollable_moves_hook = $("#scrollable-moves");
+    var move_hook;
     var move_num;
-    var move_pair;
-    var pair_arr;
     var seperator;
+    var append_string;
 
     for (i = 1; i < moves_arr.length; ++i) {
-      move_pair = moves_arr[i].trim();
-      pair_arr = move_pair.split(/\s/g);
       move_num = i.toString();
       hook_id = "#p" + move_num;
-      hook = $(hook_id);
-      if (pair_arr[0].length == 2) {
+      move_hook = $(hook_id);
+
+      // neatens up the columns
+      if (moves_arr[i][0].length == 2) {
         seperator = "&nbsp;&nbsp;&nbsp;&nbsp;";
       }
-      else if (pair_arr[0].length == 3) {
+      else if (moves_arr[i][0].length == 3) {
         seperator = "&nbsp;&nbsp;&nbsp;";
       }
-      else if (pair_arr[0].length == 4) {
+      else if (moves_arr[i][0].length == 4) {
         seperator = "&nbsp;&nbsp";
       }
-      else if (pair_arr[0].length == 5) {
+      else if (moves_arr[i][0].length == 5) {
         seperator = "&nbsp;";
       }
 
-      hook.append("<p class=\"pair-margins\">" + move_num + ". " + pair_arr[0] + seperator + pair_arr[1] +  "</p>");
+      // ensures the scrollable area fills up correctly as the number of
+      // moves increases
+      append_string = "<p class=\"pair-margins\">" + move_num
+        + ". &nbsp;" + "<b>" + moves_arr[i][0] + seperator + moves_arr[i][1] + "</b>" + "</p>"
+
+      if (i > 12) {
+        var darkness;
+        if (i % 2 == 0) {
+          darkness = "pair-dark";
+        } else {
+          darkness = "pair-light";
+        }
+        append_string = "<div class=\"chess-move-pair " + darkness + "\" id=\"p"
+          + move_num + "\">" + append_string + "</div>";
+
+        scrollable_moves_hook.append(append_string);
+      }
+      else {
+        move_hook.append(append_string);
+      }
+      //console.log(board.fen());
     }
   }
 
- //==============================================================
+//==============================================================
 // get the chess.com JSON
 
   let url = 'https://api.chess.com/pub/player/ajze/games';
@@ -96,7 +135,8 @@ $(document).ready(function() {
     console.log('Fetch Error :-S', err);
     })
     .then(function(){
-      loadPosition(current_position);
       processMoves();
+      loadPosition(current_position);
+
     });
 });
