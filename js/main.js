@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-  $("#site-footer").load("html/footer.html");
-  $("#site-header").load("html/header.html", function(){
+  $("#site-footer").load("html/header.html");
+  $("#site-header").load("html/footer.html", function(){
 
     var modal = $("#modal");
     var modalOverlay = $("#modal-overlay");
@@ -29,12 +29,6 @@ $(document).ready(function() {
       ep.empty();
       modal.toggleClass("closed");
       modalOverlay.toggleClass("closed");
-    });
-
-    var current_game1 = 'q3r1r1/p1p2pk1/1p1p4/2P3pQ/7n/1B1PN3/PP1P4/6KR w - - 3 22';
-    var board = ChessBoard('board', {
-      position: current_game1,
-      showNotation: false
     });
   });
 });
