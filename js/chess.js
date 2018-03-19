@@ -1,6 +1,7 @@
 var current_position = '';
-var board_orientation;
-var opponent = "anebir";
+var board_orientation = '';
+var moves = '';
+var opponent = 'anebir';
 var chess_data;
 
 /*
@@ -11,14 +12,16 @@ JSON THIS INTO A REST API EVENTUALLY WITH PYTHON RUNNING ON AWS!
 */
 
 $(document).ready(function() {
+
+
+
   var board = ChessBoard('board', {
     position: 'start',
-    orientation: 'black',
+    orientation: 'black', // find way to not hardcode this
     showNotation: false
   });
 
   function loadPosition(position) {
-    console.log("load position called");
     board.position(position, false);
   }
 
@@ -26,12 +29,50 @@ $(document).ready(function() {
     chess_data.games.some(function(game){
       if (game['white'].indexOf(opponent) != -1
       || game['black'].indexOf(opponent) != -1) {
-         current_position = game['fen'];
-         orientation = 'black';
-         return true;
+
+        moves = game['pgn'].split(/\n/).slice(-1)[0];
+        current_position = game['fen'];
+        return true;
       }
     });
   }
+
+  function processMoves() {
+
+    // if empty ..
+    // if less than 10 etc...
+
+    var moves_arr = moves.split(/\d+[.]/g);
+    var hook_id;
+    var hook;
+    var move_num;
+    var move_pair;
+    var pair_arr;
+    var seperator;
+
+    for (i = 1; i < moves_arr.length; ++i) {
+      move_pair = moves_arr[i].trim();
+      pair_arr = move_pair.split(/\s/g);
+      move_num = i.toString();
+      hook_id = "#p" + move_num;
+      hook = $(hook_id);
+      if (pair_arr[0].length == 2) {
+        seperator = "&nbsp;&nbsp;&nbsp;&nbsp;";
+      }
+      else if (pair_arr[0].length == 3) {
+        seperator = "&nbsp;&nbsp;&nbsp;";
+      }
+      else if (pair_arr[0].length == 4) {
+        seperator = "&nbsp;&nbsp";
+      }
+      else if (pair_arr[0].length == 5) {
+        seperator = "&nbsp;";
+      }
+
+      hook.append("<p class=\"pair-margins\">" + move_num + ". " + pair_arr[0] + seperator + pair_arr[1] +  "</p>");
+    }
+  }
+
  //==============================================================
 // get the chess.com JSON
 
@@ -56,5 +97,6 @@ $(document).ready(function() {
     })
     .then(function(){
       loadPosition(current_position);
+      processMoves();
     });
 });

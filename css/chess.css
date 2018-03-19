@@ -1,3 +1,8 @@
+/* =========================================================
+   STRUCTURE AND NAV
+========================================================= */
+
+
 body
 {
     background-image: url("../img/flags3.jpg");
@@ -130,6 +135,8 @@ video#bgvid {
    color:black!important;
  }
 
+
+
 #page-content {
   background: white;
   padding-left: 14px;
@@ -148,6 +155,14 @@ video#bgvid {
   -ms-flex-direction: column;
   -webkit-flex-direction: column;
   flex-direction: column;
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+p {
+  margin: 0px;
 }
 
 #chess-title {
@@ -170,9 +185,46 @@ video#bgvid {
 }
 
 #move-history {
-  width: 100px;
+  width: 130px;
+  height: 400px;
   float: left;
   margin-left: 10px;
+}
+
+#move-history-title {
+  border-top: 0.5px solid #e8e8e8;
+  border-bottom: 0.5px solid #e8e8e8;
+  height: 36px;
+  width: 100%;
+}
+
+#move-history h3 {
+  margin: 8px 0px 8px 6px;
+}
+
+#scrollable-moves {
+  overflow-y: scroll;
+  width: 100%;
+  height: 360px;
+}
+
+.chess-move-pair {
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+}
+
+.pair-light {
+  background-color: #F1F1F1;
+}
+
+.pair-dark{
+  background-color: #BFBEBE;
+}
+
+.pair-margins {
+  margin-top: 6px;
+  margin-left: 6px;
 }
 
 
@@ -304,6 +356,46 @@ width: auto;
   }
 
   #move-history {
-    display: none;
+    width: 130px;
+    height: 300px;
+    float: left;
+    margin-left: 10px;
   }
+
+  #move-history-title {
+    border-top: 0.5px solid #e8e8e8;
+    border-bottom: 0.5px solid #e8e8e8;
+    height: 26px;
+    width: 100%;
+  }
+
+  #move-history h3 {
+    margin: 8px 0px 8px 6px;
+  }
+
+  #scrollable-moves {
+    overflow-y: scroll;
+    width: 100%;
+    height: 260px;
+  }
+
+  .chess-move-pair {
+    width: 100%;
+    height: 21px;
+    overflow: hidden;
+  }
+
+  .pair-light {
+    background-color: #F1F1F1;
+  }
+
+  .pair-dark{
+    background-color: #BFBEBE;
+  }
+
+  .pair-margins {
+    margin-top: 6px;
+    margin-left: 6px;
+  }
+
 }
