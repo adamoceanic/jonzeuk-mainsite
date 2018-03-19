@@ -16,6 +16,16 @@ JSON THIS INTO A REST API EVENTUALLY WITH PYTHON RUNNING ON AWS!
 
 $(document).ready(function() {
 
+  $.getScript('chess.min.js', function() {
+  var cb = new Chess();
+  cb.move('e4');
+  cb.move('Nc6');
+  cb.move('Bc4');
+  cb.move('Ne5');
+
+  console.log(chess.ascii());
+});
+
   var board = ChessBoard('board', {
     position: 'start',
     orientation: 'black', // find way to not hardcode this
