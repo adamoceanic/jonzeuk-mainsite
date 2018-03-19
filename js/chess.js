@@ -1,4 +1,5 @@
 var current_position = '';
+var board_orientation;
 var opponent = "anebir";
 var chess_data;
 
@@ -12,6 +13,7 @@ JSON THIS INTO A REST API EVENTUALLY WITH PYTHON RUNNING ON AWS!
 $(document).ready(function() {
   var board = ChessBoard('board', {
     position: 'start',
+    orientation: 'black',
     showNotation: false
   });
 
@@ -25,6 +27,7 @@ $(document).ready(function() {
       if (game['white'].indexOf(opponent) != -1
       || game['black'].indexOf(opponent) != -1) {
          current_position = game['fen'];
+         orientation = 'black';
          return true;
       }
     });
