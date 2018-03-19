@@ -16,7 +16,7 @@ JSON THIS INTO A REST API EVENTUALLY WITH PYTHON RUNNING ON AWS!
 
 $(document).ready(function() {
 
-  $.getScript('chess.min.js', function() {
+  $.getScript('js/chess.min.js', function() {
   var cb = new Chess();
   cb.move('e4');
   cb.move('Nc6');
