@@ -19,10 +19,12 @@ $(document).ready(function() {
     showNotation: false
   });
 
+  //==============================================================
   function loadPosition(position) {
     board.position(position);  // second arg false for no animation
   }
 
+  //==============================================================
   function processData(chess_data) {
     chess_data.games.some(function(game){
       if (game['white'].indexOf(opponent) != -1 || game['black'].indexOf(opponent) != -1) {
@@ -44,6 +46,8 @@ $(document).ready(function() {
     });
   }
 
+  //==============================================================
+  // enables the clickable move history
   function createFenHistory() {
     fen_history = {};
 
@@ -66,6 +70,8 @@ $(document).ready(function() {
     });
   }
 
+  //==============================================================
+  // build the scrollable move list
   function processMoves() {
 
     // if empty edge cases need sorting etc..
@@ -125,7 +131,6 @@ $(document).ready(function() {
     }
   }
 
-
 //==============================================================
 // get the chess.com JSON
 
@@ -142,7 +147,7 @@ $(document).ready(function() {
     })
     .then(function(data) {
 
-          // need to check for empty response
+          // need to check for empty response / no games
 
           chess_data = data;
           processData(chess_data);
