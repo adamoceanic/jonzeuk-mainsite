@@ -4,27 +4,14 @@ var moves = '';
 var opponent = 'anebir';
 var moves_arr;
 var move_pair;
-var fen_history_arr;
+var fen_history;
 var chess_data;
 
 /*
-NEED SOMETHING LIKE CLICKABLE MOVE HISTORY etc
-EACH STORES THE FEN OF THE PREVIOUS STEP PLUS THE ANIMATION
-
 JSON THIS INTO A REST API EVENTUALLY WITH PYTHON RUNNING ON AWS!
 */
 
 $(document).ready(function() {
-
-  $.getScript('js/chess.min.js', function() {
-  var cb = new Chess();
-  cb.move('e4');
-  cb.move('Nc6');
-  cb.move('Bc4');
-  cb.move('Ne5');
-
-  console.log(cb.ascii());
-});
 
   var board = ChessBoard('board', {
     position: 'start',
@@ -33,7 +20,7 @@ $(document).ready(function() {
   });
 
   function loadPosition(position) {
-    board.position(position, false);
+    board.position(position);  // second arg false for no animation
   }
 
   function processData(chess_data) {
@@ -57,16 +44,27 @@ $(document).ready(function() {
     });
   }
 
-// coming later
-  /*
   function createFenHistory() {
-    for (i = 1; i < moves_arr.length; ++i) {
-      for (i = 1; i < moves_arr[i].length; ++i) {
+    fen_history = {};
 
+    $.getScript('js/chess.min.js', function() {
+      var cb = new Chess();
+
+      var move_number;
+      var move_letter;
+
+      for (i = 0; i < moves_arr.length -1; ++i) {
+        for (j = 0; j < 2; ++j) {
+          cb.move(moves_arr[i+1][j]);
+
+          move_number = i+1;
+          if (j == 0) { move_letter = 'a'; }
+          else { move_letter = 'b'; }
+          fen_history[move_letter + move_number.toString()] = cb.fen();
+        }
       }
-    }
+    });
   }
-  */
 
   function processMoves() {
 
@@ -86,22 +84,28 @@ $(document).ready(function() {
 
       // neatens up the columns
       if (moves_arr[i][0].length == 2) {
-        seperator = "&nbsp;&nbsp;&nbsp;&nbsp;";
+        seperator = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
       }
       else if (moves_arr[i][0].length == 3) {
-        seperator = "&nbsp;&nbsp;&nbsp;";
+        seperator = "&nbsp;&nbsp;&nbsp;&nbsp;";
       }
       else if (moves_arr[i][0].length == 4) {
-        seperator = "&nbsp;&nbsp";
+        seperator = "&nbsp;&nbsp&nbsp;";
       }
       else if (moves_arr[i][0].length == 5) {
-        seperator = "&nbsp;";
+        seperator = "&nbsp;&nbsp;";
       }
 
       // ensures the scrollable area fills up correctly as the number of
       // moves increases
-      append_string = "<p class=\"pair-margins\">" + move_num
-        + ". &nbsp;" + "<b>" + moves_arr[i][0] + seperator + moves_arr[i][1] + "</b>" + "</p>"
+      append_string = "<div class=\"pair-margins\"><div class=\"move-num\">"
+        + move_num + ". &nbsp;</div>"
+        + "<div class=\"move-clickable\" id=\"a" + move_num + "\"><b>"
+        + moves_arr[i][0] + "</b></div>"
+        + "<p style=\"float: left;\">" + seperator + "</p>"
+        + "<div class=\"move-clickable\" id=\"b" + move_num + "\"><b>"
+        + moves_arr[i][1] + "</b></div>"
+        + "</p>";
 
       if (i > 12) {
         var darkness;
@@ -118,9 +122,9 @@ $(document).ready(function() {
       else {
         move_hook.append(append_string);
       }
-      //console.log(board.fen());
     }
   }
+
 
 //==============================================================
 // get the chess.com JSON
@@ -132,21 +136,26 @@ $(document).ready(function() {
         if (response.status !== 200) {
           console.log('Looks like there was a problem. Status Code: ' +
             response.status);
-          return;
+          throw new Error('Error with fetching from chess.com API');
         }
         return response.json()
     })
     .then(function(data) {
+
+          // need to check for empty response
+
           chess_data = data;
-          //console.log(chess_data);
           processData(chess_data);
+          processMoves();
+          createFenHistory();
+          loadPosition(current_position);
+    })
+    .then(function(){
+      $(".move-clickable").click(function(){
+        board.position(fen_history[$(this).attr('id')]);
+      });
     })
     .catch(function(err) {
     console.log('Fetch Error :-S', err);
-    })
-    .then(function(){
-      processMoves();
-      loadPosition(current_position);
-
-    });
+  });
 });

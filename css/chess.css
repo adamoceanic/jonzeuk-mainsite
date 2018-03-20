@@ -211,7 +211,7 @@ p {
 .chess-move-pair {
   width: 100%;
   height: 30px;
-  overflow: hidden;  
+  overflow: hidden;
 }
 
 .pair-light {
@@ -225,6 +225,15 @@ p {
 .pair-margins {
   margin-top: 6px;
   margin-left: 6px;
+}
+
+.move-num {
+  float: left;
+}
+
+.move-clickable {
+  float: left;
+  cursor: pointer;
 }
 
 
