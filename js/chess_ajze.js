@@ -15,7 +15,7 @@ $(document).ready(function() {
 
   var board = ChessBoard('board', {
     position: 'start',
-    orientation: 'black', // find way to not hardcode this
+    orientation: 'white', // find way to not hardcode this
     showNotation: false
   });
 
