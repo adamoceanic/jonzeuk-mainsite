@@ -27,7 +27,7 @@ $(document).ready(function() {
   //==============================================================
   function processData(chess_data) {
     chess_data.games.some(function(game){
-      if (game['white'].indexOf(opponent) != -1 || game['black'].indexOf(opponent) != -1) {
+      if (/*game['white'].indexOf(opponent) != -1 ||*/ game['black'].indexOf(opponent) != -1) {
         moves = game['pgn'].split(/\n/).slice(-1)[0];
         moves_arr = moves.split(/\d+[.]/g);
 
