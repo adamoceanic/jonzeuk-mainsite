@@ -155,54 +155,6 @@ width: auto;
 
 @media (max-height: 800px) and (orientation:landscape) {
 
-  #main-window
-  {
-    width: 700px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 70px;
-
-    height: 600px;
-    background: white;
-    position: relative;
-    overflow: auto;
-
-    /*
-    border-style: inset;
-    border-color: #COCOCO;
-    */
-    -webkit-box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.55);
-    -moz-box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.55);
-    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.55);
-  }
-
-  #main-sub-window
-  {
-    width: 688px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 4px;
-    position: relative;
-
-    border-style: solid;
-    border-width: 1px;
-    border-color: #e8e8e8; /*#919191*/
-
-    height: 588px;
-    background: white;
-
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -moz-box-orient: vertical;
-    -ms-flex-direction: column;
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
-
   #books {
     width: 620px;
     height: 372px;
