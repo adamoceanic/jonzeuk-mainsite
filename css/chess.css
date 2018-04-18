@@ -98,12 +98,12 @@ font-style: normal;
 @media (max-height: 800px) and (orientation:landscape) {
 
   #board {
-    width: 300px;
+    width: 400px;
   }
 
   #move-history {
-    width: 130px;
-    height: 300px;
+    width: 140px;
+    height: 400px;
     float: left;
     margin-left: 10px;
   }
@@ -122,12 +122,12 @@ font-style: normal;
   #scrollable-moves {
     overflow-y: scroll;
     width: 100%;
-    height: 260px;
+    height: 360px;
   }
 
   .chess-move-pair {
     width: 100%;
-    height: 22px;
+    height: 30px;
     overflow: hidden;
   }
 
@@ -140,7 +140,7 @@ font-style: normal;
   }
 
   .pair-margins {
-    margin-top: 3px;
+    margin-top: 6px;
     margin-left: 6px;
   }
 
