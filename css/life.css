@@ -5,6 +5,7 @@
 #reading-list-title {
   margin-bottom: 10px;
   margin-top: 6px;
+  padding-right: 2px;
 }
 
 #books {
@@ -168,7 +169,7 @@ width: auto;
   }*/
 }
 
-@media (max-height: 760px) and (orientation:landscape) {
+@media (max-height: 750px) and (orientation:landscape) {
 
   #books {
     width: 620px;
