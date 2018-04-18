@@ -1,6 +1,10 @@
 /* =========================================================
    STRUCTURE AND NAV
 ========================================================= */
+html{
+  height: 100%;
+  width: 100%;
+}
 
 body
 {
@@ -38,7 +42,7 @@ video#bgvid {
 }
 
 #main-window
-{
+{/*
   width: 700px;
   height: 850px;
   float: left;
@@ -47,8 +51,16 @@ video#bgvid {
   position: fixed;
   overflow: hidden;
   margin-top: 70px;
-  margin-bottom: auto;
+  margin-bottom: auto;*/
   /* was auto */
+
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 680px;
+  overflow: hidden;
+  background: white;
 
   /*
   border-style: inset;
@@ -58,7 +70,7 @@ video#bgvid {
 
 #main-sub-window
 {
-  width: 688px;
+  width: 668px;
   margin-right: auto;
   margin-left: 10px;
   margin-top: 4px;
@@ -71,9 +83,11 @@ video#bgvid {
   border-width: 1px;
   border-color: #e8e8e8; /*#919191*/
 
-
-  height: 838px;
+  /*
+  height: 838px;*/
   background: white;
+  height: 100%;
+
 
   display: -webkit-box;
   display: -moz-box;
@@ -231,6 +245,7 @@ width: auto;
 
   #main-window
   {
+    /*
     width: 700px;
     height: 646px;
     float: left;
@@ -239,13 +254,16 @@ width: auto;
     position: fixed;
     overflow: hidden;
     margin-top: 60px;
-    margin-bottom: auto;
+    margin-bottom: auto;*/
     /* was auto */
 
-    /*
-    border-style: inset;
-    border-color: #COCOCO;
-    */
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 680px;
+    overflow: hidden;
+    background: white;
   }
 
   #main-sub-window
@@ -263,8 +281,9 @@ width: auto;
     border-width: 1px;
     border-color: #e8e8e8; /*#919191*/
 
-    height: 634px;
+    /*height: 634px;*/
     background: white;
+    height: 100%;
 
     display: -webkit-box;
     display: -moz-box;
