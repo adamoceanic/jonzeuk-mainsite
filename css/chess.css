@@ -145,3 +145,54 @@ font-style: normal;
   }
 
 }
+
+@media (max-height: 650px) and (orientation:landscape) {
+
+  #board {
+    width: 340px;
+  }
+
+  #move-history {
+    width: 140px;
+    height: 340px;
+    float: left;
+    margin-left: 10px;
+  }
+
+  #move-history-title {
+    border-top: 0.5px solid #e8e8e8;
+    border-bottom: 0.5px solid #e8e8e8;
+    height: 36px;
+    width: 100%;
+  }
+
+  #move-history h3 {
+    margin: 8px 0px 8px 6px;
+  }
+
+  #scrollable-moves {
+    overflow-y: scroll;
+    width: 100%;
+    height: 300px;
+  }
+
+  .chess-move-pair {
+    width: 100%;
+    height: 26px;
+    overflow: hidden;
+  }
+
+  .pair-light {
+    background-color: #F1F1F1;
+  }
+
+  .pair-dark{
+    background-color: #BFBEBE;
+  }
+
+  .pair-margins {
+    margin-top: 6px;
+    margin-left: 6px;
+  }
+
+}

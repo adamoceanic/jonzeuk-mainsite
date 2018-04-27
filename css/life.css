@@ -158,15 +158,10 @@ width: auto;
 
   #books {
     width: 620px;
-    height: 372px;
     margin-left: auto;
     margin-right: auto;
   }
 
-/*
-  .books-row3 {
-       display: none;
-  }*/
 }
 
 @media (max-height: 750px) and (orientation:landscape) {
@@ -174,7 +169,7 @@ width: auto;
   #books {
     width: 620px;
     height: 372px;
-    margin-left: auto;
+    margin-left: 16px;
     margin-right: auto;
   }
 

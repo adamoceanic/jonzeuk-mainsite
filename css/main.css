@@ -1,7 +1,5 @@
 #home-content-top {
-  order: 1;
-  /*font-family: sans-serif;
-  //font-size: 16px;*/
+  order: 0;
 }
 
 #title-bio {
@@ -21,10 +19,7 @@
   margin-bottom: 4px;
 }
 
-
 #home-content-bio {
-  /*font-family: 'Raleway', sans-serif;
-  font-size: 16px;*/
   padding-top: 6px;
 }
 
@@ -32,17 +27,20 @@
   float: left;
 }
 
-.blog-link-temp{
-  /*font-family: sans-serif;
-  font-size: 16px;*/
+#blog-link p {
+  margin-bottom: 6px;
+}
+
+#home-content-interests {
+  order: 1;
+  border-top: 0.5px solid #e8e8e8;
+  padding-top: 6px;
 }
 
 #home-content-skills {
-  order: 3;
+  order: 2;
   margin-top: 0px;
   padding-top: 6px;
-  /*font-family: sans-serif;
-  font-size: 16px;*/
 }
 
 #home-content-skills ul {
@@ -60,14 +58,9 @@
   margin-bottom: 10px;
 }
 
-#home-content-interests {
-  order: 2;
-  border-top: 0.5px solid #e8e8e8;
-  padding-top: 6px;
-}
-
 #home-content-interests p {
   margin-top: 2px;
+  margin-bottom: 10px;
 }
 
 @font-face {
@@ -77,4 +70,34 @@ src: url('../fonts/galsilr-webfont.woff2') format('woff2'),
      url('../galsilr-webfont.ttf') format('truetype');
 font-weight: normal;
 font-style: normal;
+}
+
+@media (max-height: 800px) and (orientation:landscape) {
+
+  #home-content-skills ul {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+
+  #home-content-skills li {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  #home-content-skills p {
+    margin-top: 2px;
+    margin-bottom: 6px;
+  }
+
+  #home-content-interests p {
+    margin-top: 2px;
+  }
+}
+
+@media (max-height: 650px) and (orientation:landscape) {
+
+  #home-content-interests p {
+    margin-top: 2px;
+    margin-bottom: 6px;
+  }
 }

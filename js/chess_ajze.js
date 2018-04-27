@@ -28,6 +28,8 @@ $(document).ready(function() {
   function processData(chess_data) {
     chess_data.games.some(function(game){
       if (/*game['white'].indexOf(opponent) != -1 ||*/ game['black'].indexOf(opponent) != -1) {
+        console.log("processData:");
+        console.log(game);
         moves = game['pgn'].split(/\n/).slice(-1)[0];
         moves_arr = moves.split(/\d+[.]/g);
 
@@ -135,9 +137,11 @@ $(document).ready(function() {
 // get the chess.com JSON
 
   let url = 'https://api.chess.com/pub/player/ajze/games';
+  //let url = 'https://api.chess.com/pub/player/anebir/games';
   fetch(url)
     .then(
       function(response) {
+        console.log(response);
         if (response.status !== 200) {
           console.log('Looks like there was a problem. Status Code: ' +
             response.status);
@@ -150,6 +154,7 @@ $(document).ready(function() {
           // need to check for empty response / no games
 
           chess_data = data;
+          console.log(chess_data);
           processData(chess_data);
           processMoves();
           createFenHistory();
