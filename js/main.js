@@ -3,7 +3,7 @@ $(document).ready(function() {
   $("#site-header").load("html/header.html");
   $("#site-footer").load("html/footer.html", function(){
 
-    alert($(window).height());
+    //alert($(window).height());
     //alert($(window).width());
 
     var modal = $("#modal");
