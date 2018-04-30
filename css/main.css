@@ -37,6 +37,12 @@
   padding-top: 6px;
 }
 
+#home-content-interests p {
+  margin-top: 2px;
+  margin-bottom: 10px;
+  max-width: inherit;
+}
+
 #home-content-skills {
   order: 2;
   margin-top: 0px;
@@ -58,10 +64,6 @@
   margin-bottom: 10px;
 }
 
-#home-content-interests p {
-  margin-top: 2px;
-  margin-bottom: 10px;
-}
 
 @font-face {
 font-family: 'galatia';
@@ -73,6 +75,10 @@ font-style: normal;
 }
 
 @media (max-height: 800px) and (orientation:landscape) {
+
+  #home-content-interests p {
+    margin-top: 2px;
+  }
 
   #home-content-skills ul {
     margin-top: 6px;
@@ -87,10 +93,6 @@ font-style: normal;
   #home-content-skills p {
     margin-top: 2px;
     margin-bottom: 6px;
-  }
-
-  #home-content-interests p {
-    margin-top: 2px;
   }
 }
 
