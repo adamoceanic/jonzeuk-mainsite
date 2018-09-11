@@ -15,7 +15,7 @@ $(document).ready(function() {
 
   var board = ChessBoard('board', {
     position: 'start',
-    orientation: 'black', // find way to not hardcode this
+    orientation: 'white', // find way to not hardcode this
     showNotation: false
   });
 
@@ -27,7 +27,7 @@ $(document).ready(function() {
   //==============================================================
   function processData(chess_data) {
     chess_data.games.some(function(game){
-      if (game['white'].indexOf(opponent) != -1  /*||  game['black'].indexOf(opponent) != -1 */) {
+      if (/*game['white'].indexOf(opponent) != -1  || */ game['black'].indexOf(opponent) != -1 ) {
         console.log("processData:");
         console.log(game);
         moves = game['pgn'].split(/\n/).slice(-1)[0];
