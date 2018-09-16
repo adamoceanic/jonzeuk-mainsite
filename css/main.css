@@ -4,7 +4,7 @@
 
 #title-bio {
   float: left;
-  width: 442px;
+  width: 394px;
   margin-right: 10px;
 }
 
@@ -25,6 +25,11 @@
 
 #headshot {
   float: left;
+}
+
+#headshot img {
+  height: 192px;
+  width: 160px;
 }
 
 #blog-link p {

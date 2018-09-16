@@ -9,7 +9,7 @@
 }
 
 #books {
-  width: 620px;
+  width: 600px;
   height: 492px;
   margin-left: auto;
   margin-right: auto;
@@ -28,21 +28,21 @@
 }
 
 .books-thumbnail-div {
-    width: 118px;
-    height: 180px;
+    width: 108px;
+    height: 164px;
     margin: 1px 1px 1px 1px;
     padding: 2px 2px 2px 2px;
 }
 
 .books-thumbnail {
-    width: 118px;
-    height: 180px;
+    width: 108px;
+    height: 164px;
 }
 
 .back {
     background-color: #C3BCBC;
-    width: 118px;
-    height: 180px;
+    width: 108px;
+    height: 164px;
 }
 
 .back a{

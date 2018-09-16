@@ -62,7 +62,7 @@ video#bgvid {
   left: 0;
   top: 0;
   position: fixed;
-  width: 680px;
+  width: 600px;
   overflow: hidden;
   background: white;
 
@@ -74,7 +74,7 @@ video#bgvid {
 
 #main-sub-window
 {
-  width: 668px;
+  width: 588px;
   margin-right: auto;
   margin-left: 10px;
   margin-top: 4px;
@@ -234,13 +234,16 @@ width: auto;
 
 .e {
   padding: 4px;
-  margin-left: 6px;
+  margin-left: 10px;
+  border: 2px solid black
 }
 
 .e-text {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
 
 }
 
@@ -253,14 +256,14 @@ width: auto;
     left: 0;
     top: 0;
     position: fixed;
-    width: 680px;
+    width: 600px;
     overflow: hidden;
     background: white;
   }
 
   #main-sub-window
   {
-    width: 668px;
+    width: 588px;
     margin-right: auto;
     margin-left: 10px;
     margin-top: 4px;
