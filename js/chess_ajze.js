@@ -1,7 +1,7 @@
 var current_position = '';
 var board_orientation = '';
 var moves = '';
-var opponent = 'anebir';
+var opponent = 'Doug_B_Chess';
 var moves_arr;
 var move_pair;
 var fen_history;
