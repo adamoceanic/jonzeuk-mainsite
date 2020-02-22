@@ -88,34 +88,6 @@ $(document).ready(function() {
   }
 
   //==============================================================
-  // enables the clickable move history
-  function createFenHistory() {
-    fen_history = {};
-
-    debugger;
-
-    //$.getScript('chess.min.js', function() {
-      var cb = new Chess();
-
-      debugger;
-
-      var move_number;
-      var move_letter;
-
-      for (i = 0; i < moves_arr.length -1; ++i) {
-        for (j = 0; j < 2; ++j) {
-          cb.move(moves_arr[i+1][j]);
-
-          move_number = i+1;
-          if (j == 0) { move_letter = 'a'; }
-          else { move_letter = 'b'; }
-          fen_history[move_letter + move_number.toString()] = cb.fen();
-        }
-      }
-    //});
-  }
-
-  //==============================================================
   // build the scrollable move list
   function processMoves() {
 
@@ -174,6 +146,34 @@ $(document).ready(function() {
         move_hook.append(append_string);
       }
     }
+  }
+
+  //==============================================================
+  // enables the clickable move history
+  function createFenHistory() {
+    fen_history = {};
+
+    debugger;
+
+    $.getScript('chess.min.js', function() {
+      var cb = new Chess();
+
+      debugger;
+
+      var move_number;
+      var move_letter;
+
+      for (i = 0; i < moves_arr.length -1; ++i) {
+        for (j = 0; j < 2; ++j) {
+          cb.move(moves_arr[i+1][j]);
+
+          move_number = i+1;
+          if (j == 0) { move_letter = 'a'; }
+          else { move_letter = 'b'; }
+          fen_history[move_letter + move_number.toString()] = cb.fen();
+        }
+      }
+    });
   }
 
 //==============================================================
