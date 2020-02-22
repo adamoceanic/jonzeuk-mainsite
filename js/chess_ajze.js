@@ -155,10 +155,8 @@ $(document).ready(function() {
 
     debugger;
 
-    $.getScript('chess.min.js', function() {
+    $.getScript('js/chess.min.js', function() {
       var cb = new Chess();
-
-      debugger;
 
       var move_number;
       var move_letter;
