@@ -1,7 +1,7 @@
 var current_position = '';
 var board_orientation = '';
 var moves = '';
-var opponent = 'doug_b_chess';
+var opponent = 'anebir';
 var moves_arr;
 var move_pair;
 var fen_history;
@@ -15,7 +15,7 @@ $(document).ready(function() {
 
   var board = ChessBoard('board', {
     position: 'start',
-    orientation: 'white', // find way to not hardcode this
+    orientation: 'black', // find way to not hardcode this
     showNotation: false
   });
 
