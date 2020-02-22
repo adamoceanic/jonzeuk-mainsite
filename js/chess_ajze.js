@@ -30,18 +30,57 @@ $(document).ready(function() {
       if (game['white'].indexOf(opponent) != -1/* || game['black'].indexOf(opponent) != -1 */) {
         console.log("processData:");
         console.log(game);
+
         moves = game['pgn'].split(/\n/).slice(-1)[0];
         moves_arr = moves.split(/\d+[.]/g);
 
-        for (i = 1; i < moves_arr.length; ++i) {
-          move_pair = moves_arr[i].trim();
-          moves_arr[i] = move_pair.split(/\s/g);
+        temp_arr = [];
 
-          // remove weird asterisk when not waiting for b move
-          if (moves_arr[i].length > 2) {
-            moves_arr[i].pop();
+        for (i = 1; i < moves_arr.length; ++i) {
+
+          if (i % 2 != 0) {
+            single_move = moves_arr[i].trim();
+            single_move = single_move.split("{", 1);
+            single_move = single_move[0].trim();
+          }
+          else {
+            single_move = moves_arr[i].trim();
+            single_move = single_move.split(" ");
+            single_move = single_move[1].trim();
+          }
+
+          temp_arr.push(single_move);
+        }
+
+        move_count = temp_arr.length;
+        moves_arr = [];
+
+        if (move_count % 2 == 0) {
+          for (i = 0; i < move_count; i+=2) {
+            move_arr = [temp_arr[i], temp_arr[i+1]]
+            moves_arr.push(move_arr);
           }
         }
+        else {
+          for (i = 0; i <= move_count; i+=2) {
+            if (i == move_count-1) {
+              move_arr = [temp_arr[i], "*"];
+              moves_arr.push(move_arr)
+              break;
+            }
+            else {
+              move_arr = [temp_arr[i], temp_arr[i+1]]
+              moves_arr.push(move_arr);
+            }
+          }
+        }
+
+        // // remove weird asterisk when not waiting for b move
+        // if (moves_arr[i].length > 2) {
+        //   moves_arr[i].pop();
+        // }
+
+
         current_position = game['fen'];
         return true;
       }
@@ -53,8 +92,12 @@ $(document).ready(function() {
   function createFenHistory() {
     fen_history = {};
 
-    $.getScript('js/chess.min.js', function() {
+    debugger;
+
+    //$.getScript('chess.min.js', function() {
       var cb = new Chess();
+
+      debugger;
 
       var move_number;
       var move_letter;
@@ -69,7 +112,7 @@ $(document).ready(function() {
           fen_history[move_letter + move_number.toString()] = cb.fen();
         }
       }
-    });
+    //});
   }
 
   //==============================================================
