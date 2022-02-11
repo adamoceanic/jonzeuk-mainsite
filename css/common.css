@@ -59,10 +59,10 @@ video#bgvid {
   /* was auto */
 
   height: 100%;
-  left: 0;
+  left: 26%;
   top: 0;
   position: fixed;
-  width: 600px;
+  width: 900px;
   overflow: hidden;
   background: white;
 
@@ -76,7 +76,7 @@ video#bgvid {
 {
   width: 588px;
   margin-right: auto;
-  margin-left: 10px;
+  margin-left: 120px;
   margin-top: 4px;
   position: relative;
 
